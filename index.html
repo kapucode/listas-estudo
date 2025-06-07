@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listas</title> 
+    <link rel="stylesheet" href="style.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="media.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="fonts/fonts.css" type="text/css" media="all" />
+  </head>
+  <body onresize="size()">
+    <header>
+      <h1>Listas</h1> 
+      <nav id="menu">
+        <ul>
+          <li><a href="#ol" onclick="destacar('ol')">Ordenada</a></li> 
+          <li><a href="#ul" onclick="destacar('ul')">Não Ordenada</a></li>
+          <li><a href="#juntando" onclick="destacar('juntando')">Junção</a></li>
+          <li><a href="#dl" onclick="destacar('dl')">Definição</a></li>
+        </ul>
+      </nav>
+      <div class="menu-icon" onclick="clickMenu()"><svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" height="1.5em" width="1.5em"><path fill="currentColor" d="M7.5 36q-.65 0-1.075-.425Q6 35.15 6 34.5q0-.65.425-1.075Q6.85 33 7.5 33h33q.65 0 1.075.425Q42 33.85 42 34.5q0 .65-.425 1.075Q41.15 36 40.5 36Zm0-10.5q-.65 0-1.075-.425Q6 24.65 6 24q0-.65.425-1.075Q6.85 22.5 7.5 22.5h33q.65 0 1.075.425Q42 23.35 42 24q0 .65-.425 1.075-.425.425-1.075.425Zm0-10.5q-.65 0-1.075-.425Q6 14.15 6 13.5q0-.65.425-1.075Q6.85 12 7.5 12h33q.65 0 1.075.425Q42 12.85 42 13.5q0 .65-.425 1.075Q41.15 15 40.5 15Z"/></svg></div>
+    </header>
+    <main>
+      <section class="ol" id="ol">
+        <h2>Lista Ordenada</h2>
+        <p>Para adicionar uma lista ordenada em seu código HTML, você deve adicionar a tag <strong>&lt;ol&gt;</strong>. Dentro dessa tag você deve adicionar a tag <strong>&lt;li&gt;</strong>, que adiciona um item de lista.</p>
+        <p>Passo a passo para criar uma <strong>lista ordenada</strong>:</p>
+        <ol>
+          <li>Abrir e fechar a tag <strong>&lt;ol&gt;</strong></li>
+          <li>Dentro dela, adicionar uma tag <strong>&lt;li&gt;</strong> a cada item da lista.</li>
+        </ol>
+        
+        <section class="attr-ol">
+          <div class="mt"><h2>Atributos de <strong class="title">&lt;ol&gt;</strong></h3></div>
+          <p class="center">Todos: <strong>&lt;ol type="1/A/a/I/i" start=""&gt;</strong></p>
+          <p><strong>type="1"</strong> - Deixa a lista ordenada com números.</p>
+          <p><strong>type="A/a"</strong> - Deixa a lista ordenada com o alfabeto maiúsculo ou minúsculo.</p>
+          <p><strong>type="I/i"</strong> - Deixa a lista ordenads com números romanos maiúsculos ou minúsculos.</p>
+          <p><strong>start=""</strong> - De onde a lista irá começar (4, D, IX)</p>
+        </section>
+      </section>
+      <section class="ul" id="ul">
+        <h2>Lista Não Ordenada</h2>
+        <p>Para adicionar uma lista não ordenada em seu código HTML, você deve adicionar a tag <strong>&lt;ul&gt;</strong>. Dentro dessa tag você deve adicionar a tag <strong>&lt;li&gt;</strong>, que adiciona um item de lista.</p>
+        <p>Passo a passo para criar uma <strong>lista não ordenada</strong>:</p>
+        <ul type="square">
+          <li>Abrir e fechar a tag <strong>&lt;ul&gt;</strong></li>
+          <li>Dentro dela, adicionar uma tag <strong>&lt;li&gt;</strong> a cada item da lista.</li>
+        </ul>
+        <section class="attr-ul">
+          <div class="mt"><h2>Atributos de <strong class="title">&lt;ul&gt;</strong></h3></div>
+          <p class="center">Todos: <strong>&lt;ul type="disc/circle/square"&gt;</strong></p>
+          <p><strong>type="disc"</strong> - Deixa o estilo da lista com uma bolinha preenchida..</p>
+          <p><strong>type="circle"</strong> - Deixa o estilo da lista com uma bolinha não preenchida..</p>
+          <p><strong>type="square"</strong> - Deixa o estilo da lista com um quadrado preenchido..</p>
+        </section>
+      </section>
+      <section class="juntando" id="juntando">
+        <h2>Juntando listas</h2>
+        <p>Para juntar, é preciso somente aninhar as listas. &lt;ol&gt; pode ser junto dele mesmo e de &lt;ul&gt;, com &lt;ul&gt; é a mesma coisa.</p>
+        
+        <details>
+          <summary><div class="mt title-ex"><h3>Exemplo de junção <span class="seta"></span></h3></div></summary>
+          <div class="ex">
+            <h4>Meus jogos favoritos</h4>
+            <ul>
+              <li>Antigos</li>
+              <ol>
+                <li>Mario</li>  
+                <li>Crash Bandicoot</li>
+              </ol> <br />
+              
+              <li>Novos</li>
+              <ol>
+                <li>Brawl Stars</li>
+                <ul type="square">
+                  <li>Comecei em 2020</li>
+                </ul>
+                <li>Roblox</li>
+                <ul type="square">
+                  <li>Comecei em 2017</li>
+                </ul>
+              </ol>
+            </ul>
+          </div>
+        </details>
+      </section>
+      <section class="dl" id="dl">
+        <h2>Lista de definição</h2>
+        <p>A tag &lt;dl&gt; é utilizada para fazer uma lista de definições de palavras. Como um:
+        <strong><q>HTML<br>
+            Linguagem de marcação utilizada para desenvolvimento web.</q></strong></p>
+        <p>Passo a passo para criar uma lista de definição:</p>
+        <ol>
+          <li>Adicione a tag <strong>&lt;dl&gt;</strong> (Definition List)</li>
+          <li>Dentro dele, adicione a tag <strong>&lt;dt&gt;</strong> (Definition Text)</li>
+          <li>Após isso, adicione a tag <strong>&lt;dd&gt;</strong> (Definition Description)</li>
+        </ol>
+        
+        <details class="center">
+          <summary><div class="mt title-ex"><h3>Exemplo de definição <span class="seta"></span></h3></div></summary>
+          <div class="ex">
+            <dl>
+              <dt>HTML</dt>
+              <dd>Linguagem de marcação utilizada para criação do conteúdo de um site.</dd>
+            </dl>
+          </div>
+        </details>
+      </section>
+    </main>
+    
+    <script type="text/javascript" charset="utf-8">
+      function clickMenu() {
+        if (menu.style.display == 'block') {
+          menu.style.display = 'none'
+        } else {
+          menu.style.display = 'block'
+        }
+      }
+      
+      const detalhe = document.querySelector('details')
+      let usuarioFezMudanca = false
+      
+      // Detecta quando o usuário abre ou fecha o details
+      detalhe.addEventListener('toggle', () => {
+        usuarioFezMudanca = true
+      })
+      
+      // Função pra controlar o menu e o details no resize
+      function size() {
+        if (window.innerWidth >= 768) {
+          menu.style.display = 'block'
+          
+          // Só abre details se o usuário nunca mexeu
+          if (!usuarioFezMudanca) {
+            detalhe.open = true
+          }
+        } else {
+          // Se a tela for menor que 768, menu desaparecer.
+          menu.style.display = 'none'
+        }
+      }
+      
+      // Executa ao carregar e redimensionar
+      window.addEventListener('load', size)
+      window.addEventListener('resize', size)
+      
+      function destacar(id) {
+        const alvo = document.getElementById(id);
+        alvo.classList.add('piscar');
+      
+        let vezes = 0;
+      
+        const piscar = setInterval(() => {
+          alvo.style.backgroundColor = 'rgba(0,0,0,0.25)';
+          
+          setTimeout(() => {
+            alvo.style.backgroundColor = '';
+          }, 200);
+      
+          vezes++;
+      
+          if (vezes >= 3) {
+            clearInterval(piscar);
+          }
+        }, 400); // intervalo entre piscadas
+      }
+      
+      
+      const summaries = document.querySelectorAll('summary');
+      summaries.forEach(summary => {
+        summary.querySelector('.seta').innerText = '\u25BC'
+        summary.addEventListener("click", function(event) {
+          // pega a seta dentro do summary
+          const seta = summary.querySelector(".seta");
+      
+          // alterna o símbolo
+          seta.innerText = (seta.innerText === "\u25BC") ? "\u25B2" : "\u25BC";
+        });
+      });
+    </script>
+  </body>
+</html>

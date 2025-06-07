@@ -1,0 +1,172 @@
+@charset "UTF-8";
+
+/* Configurações gerais */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  font-family: poppinsregular, Arial, sans-serif;
+  background-color: rgb(47, 47, 47);
+  color: white;
+}
+
+h1, h2, h3, h4 {
+  font-family: poppinslight, Arial, sans-serif;
+  text-align: center;
+}
+
+p {
+  line-height: 1.7em;
+}
+
+strong {
+  color: rgb(255,209,209);
+  transition: all 0.2s ease-in;
+}
+
+strong:hover {
+  color: rgb(255,144,144)
+}
+
+strong.title {
+  color: rgb(255,255,241);
+  font-family: poppinsmedium;
+}
+
+/* Configuração direta */
+header {
+  box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.500);
+  padding: 10px;
+  text-align: center;
+  list-style: none;
+  margin-bottom: 10px;
+}
+
+header h1 {
+  margin: 10px;
+  font-size: clamp(2.5em, 6vw, 3.4em);
+}
+
+header ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-flow: column wrap;
+}
+
+header nav {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+header nav a {
+  display: block;
+  width: 100%;
+  color: white;
+  text-decoration: none;
+  padding: 10px;
+  background-color: rgba(128,128,128,0.416);
+  border-radius: 5px;
+  border: 1px solid rgb(47, 47, 47);
+  transition: all 0.3s;
+}
+
+header nav a:hover {
+  background-color: rgba(128,128,128,0.800);
+  transform: scale(1.02);
+  font-size: 1.01em;
+}
+ /* PARA DISPOSITIVOS MÓVEIS: MENU HAMBÚRGUER */
+header nav {
+  display: none;
+}
+
+.menu-icon {
+  color: white;
+  cursor: pointer;
+  font-size: 1.5em;
+  padding: 10px 10px 0px 10px;
+  
+  position: absolute;
+  top: 13px;
+  right: 5px;
+  transition: 0.3s;
+}
+
+.menu-icon:hover {
+  transform: scale(1.1);
+}
+
+
+
+.center {
+  text-align: center;
+}
+
+section.ol, section.ul, section.juntando, section.dl {
+  margin: 10px;
+  border: 3.5px solid rgba(0,0,0,0.200);
+  box-shadow: 0px 0px 5px rgba(0,0,0,0.200), inset 0px 0px 5px rgba(0,0,0,0.200);
+  
+  padding: 10px;
+  border-radius: 10px;
+  font-size: clamp(1.1em, 4vw, 2em);
+  list-style-position: inside;
+}
+
+div.mt {
+  display: block;
+  margin-top: 10px;
+}
+
+.piscar {
+  transition: background-color 0.3s;
+}
+
+.title-ex {
+  position: relative;
+  top: 2px;
+  background-color: rgb(255,64,64);
+  padding: 10px 0px;
+  border: 1px solid white;
+}
+
+div.ex {
+  padding: 10px;
+  border: 1px solid white;
+  border-top: none;
+  border-radius: 3px;
+}
+
+details .title-ex {
+  border-radius: 5px;
+}
+
+details[open] .title-ex {
+  border-radius: 5px 5px 0px 0px;
+}
+
+details summary {
+  list-style: none; /* Remove a seta padrão */
+  cursor: pointer;
+}
+
+details summary::-webkit-details-marker {
+  display: none; /* Remove a seta no Chrome/Safari */
+}
+
+section > h2 {
+  padding: 5px;
+  font-size: 2em;
+  text-transform: capitalize;
+  font-weight: 700;
+  letter-spacing: 1px;
+  background: linear-gradient(to right, #ffa726, #ff7b51);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; /* Texto com gradiente */
+}
